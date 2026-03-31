@@ -585,6 +585,130 @@
       margin: 0;
     }
 
+    /* ─── INSTAGRAM GALLERY ─── */
+    #instagram {
+      padding: 8rem 5rem;
+      background: var(--choco);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #instagram::before {
+      content: '📸';
+      position: absolute; font-size: 30rem;
+      opacity: 0.03; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      pointer-events: none;
+    }
+
+    #instagram .section-tag {
+      justify-content: center;
+      color: var(--caramel);
+    }
+    #instagram .section-tag::before { display: none; }
+
+    #instagram h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 4vw, 3.8rem);
+      font-weight: 900;
+      color: var(--cream);
+      margin: 0.5rem 0 1rem;
+      line-height: 1.1;
+    }
+
+    #instagram h2 em { color: var(--caramel); font-style: italic; }
+
+    #instagram > p {
+      font-size: 1.15rem;
+      color: rgba(245,237,216,0.7);
+      max-width: 50ch;
+      margin: 0 auto 4rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      max-width: 1100px;
+      margin: 0 auto 3rem;
+    }
+
+    .insta-card {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .insta-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease, filter 0.5s ease;
+    }
+
+    .insta-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(61,26,10,0.6) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .insta-card:hover img {
+      transform: scale(1.08);
+      filter: brightness(1.05);
+    }
+
+    .insta-card:hover::after { opacity: 1; }
+
+    .insta-card .insta-caption {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 1.2rem;
+      right: 1.2rem;
+      z-index: 2;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.4s, transform 0.4s;
+    }
+
+    .insta-card:hover .insta-caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .insta-follow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cream);
+      text-decoration: none;
+      padding: 0.8rem 2rem;
+      border: 1px solid rgba(196,134,58,0.4);
+      transition: all 0.3s;
+    }
+
+    .insta-follow:hover {
+      background: var(--caramel);
+      border-color: var(--caramel);
+      color: var(--white);
+    }
+
     /* ─── ORDER / CTA ─── */
     #order {
       padding: 9rem 5rem;
@@ -691,6 +815,8 @@
       .products-grid { grid-template-columns: 1fr; }
 
       #story { grid-template-columns: 1fr; padding: 5rem 2rem; gap: 3rem; }
+      #instagram { padding: 5rem 2rem; }
+      .insta-grid { grid-template-columns: 1fr; gap: 1rem; max-width: 500px; }
       #order { padding: 5rem 2rem; }
       footer { padding: 2rem; flex-direction: column; text-align: center; }
     }
@@ -705,6 +831,7 @@
       <li><a href="#what">What's an Alfajor?</a></li>
       <li><a href="#menu">Our Menu</a></li>
       <li><a href="#story">Our Story</a></li>
+      <li><a href="#instagram">Gallery</a></li>
       <li><a href="#order">Order</a></li>
     </ul>
     <a href="https://www.instagram.com/la.charrua.alfajores" target="_blank" class="nav-insta">@la.charrua.alfajores</a>
@@ -864,6 +991,32 @@
         <a href="https://www.instagram.com/la.charrua.alfajores" target="_blank" class="btn-primary">Follow on Instagram</a>
       </div>
     </div>
+  </section>
+
+  <!-- INSTAGRAM GALLERY -->
+  <section id="instagram">
+    <p class="section-tag">@la.charrua.alfajores</p>
+    <h2>Straight from<br><em>our kitchen</em></h2>
+    <p>A glimpse into the world of La Charrúa — from our pop-ups and markets to the alfajores fresh out of the oven.</p>
+
+    <div class="insta-grid">
+      <a href="https://www.instagram.com/la.charrua.alfajores" target="_blank" class="insta-card">
+        <img src="images/instagram-1.jpg" alt="La Charrúa at The Wild Dough Artisan Sandwich Bar pop-up" loading="lazy" />
+        <span class="insta-caption">Pop-up vibes</span>
+      </a>
+      <a href="https://www.instagram.com/la.charrua.alfajores" target="_blank" class="insta-card">
+        <img src="images/instagram-2.jpg" alt="La Charrúa chocolate alfajores with branded kraft packaging and gift box" loading="lazy" />
+        <span class="insta-caption">Handcrafted with love</span>
+      </a>
+      <a href="https://www.instagram.com/la.charrua.alfajores" target="_blank" class="insta-card">
+        <img src="images/instagram-3.jpg" alt="La Charrúa alfajores — fresh from the kitchen" loading="lazy" />
+        <span class="insta-caption">Fresh from the kitchen</span>
+      </a>
+    </div>
+
+    <a href="https://www.instagram.com/la.charrua.alfajores" target="_blank" class="insta-follow">
+      Follow us on Instagram →
+    </a>
   </section>
 
   <!-- ORDER / CTA -->
