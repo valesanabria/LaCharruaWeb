@@ -143,10 +143,16 @@
     .business{padding:78px 0 42px;text-align:center}
     .business>p{max-width:700px;margin:14px auto 36px}
     .business-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:920px;margin:0 auto;text-align:left}
-    .business-card{background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:14px;padding:30px;box-shadow:var(--shadow);display:flex;flex-direction:column}
-    .business-card h3{margin:0 0 10px}
+    .business-card{background:#8f8a83;color:#fff;border:1px solid #8f8a83;border-radius:14px;padding:30px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .business-card h3{margin:0 0 10px;color:#fff}
     .business-card p{margin:0 0 22px}
-    .business-card .button{margin-top:auto;align-self:stretch;justify-content:center;min-height:58px}
+    .business-card .button{margin-top:auto;align-self:stretch;justify-content:center;min-height:58px;background:#fff;color:#1a1a1a}
+    .business-card .button:hover{background:#f4f1ec}
+    .business-card.alt{background:#fff;color:#1a1a1a;border:1px solid var(--line)}
+    .business-card.alt h3{color:#1a1a1a}
+    .business-card.alt .button{background:#fff;color:#8f8a83;border:1px solid #8f8a83}
+    .business-card.alt .button:hover{background:#f7f5f2}
+    @media (max-width:760px){.business-grid{grid-template-columns:1fr}}
 
     .social h2{max-width:700px}
     .social p{color:var(--muted);margin:16px 0 0}
@@ -326,7 +332,7 @@
             <p data-i18n="bizCard1Text">Hacemos alfajores para cafés, restaurantes y regalos corporativos.</p>
             <a class="button" href="mailto:lacharruaalfajores@gmail.com?subject=Quiero%20La%20Charrua%20en%20mi%20negocio"><span data-i18n="bizCard1Btn">Quiero para mi negocio</span></a>
           </div>
-          <div class="business-card">
+          <div class="business-card alt">
             <h3 data-i18n="bizCard2Title">¿Tenés un evento?</h3>
             <p data-i18n="bizCard2Text">¿Querés que seamos parte de tu evento, fiesta o cumpleaños? Pedinos presupuesto y opciones de tamaños.</p>
             <a class="button" href="mailto:lacharruaalfajores@gmail.com?subject=Presupuesto%20para%20mi%20evento"><span data-i18n="bizCard2Btn">Pedir presupuesto</span></a>
