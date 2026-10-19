@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es">
 <head>
+    <meta name="color-scheme" content="light">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
@@ -138,6 +139,14 @@
     .copy:hover{background:#eee4d6;color:#271b14}
     .empty-message{display:none;margin:11px 0 0;color:#9b3e2b;font-size:.84rem;font-weight:700}
     .social{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;padding:78px 0 42px}
+    .business{padding:78px 0 42px;text-align:center}
+    .business>p{max-width:700px;margin:14px auto 36px}
+    .business-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:920px;margin:0 auto;text-align:left}
+    .business-card{background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:14px;padding:30px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .business-card h3{margin:0 0 10px}
+    .business-card p{margin:0 0 22px}
+    .business-card .button{margin-top:auto;align-self:stretch;justify-content:center;min-height:58px}
+
     .social h2{max-width:700px}
     .social p{color:var(--muted);margin:16px 0 0}
     .instagram{background:var(--caramel);color:#fff}
@@ -306,6 +315,23 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.7" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
         </button>
       </section>
+
+      <section class="business" aria-labelledby="business-title">
+        <h2 id="business-title" data-i18n="businessTitle">La Charrua en tu negocio</h2>
+        <p data-i18n="businessIntro">Nos encantaría ser parte de tu negocio 🤎</p>
+        <div class="business-grid">
+          <div class="business-card">
+            <h3 data-i18n="bizCard1Title">¿Tenés un negocio?</h3>
+            <p data-i18n="bizCard1Text">Hacemos alfajores para cafés, restaurantes y regalos corporativos.</p>
+            <a class="button" href="mailto:lacharruaalfajores@gmail.com?subject=Quiero%20La%20Charrua%20en%20mi%20negocio"><span data-i18n="bizCard1Btn">Quiero para mi negocio</span></a>
+          </div>
+          <div class="business-card">
+            <h3 data-i18n="bizCard2Title">¿Tenés un evento?</h3>
+            <p data-i18n="bizCard2Text">¿Querés que seamos parte de tu evento, fiesta o cumpleaños? Pedinos presupuesto y opciones de tamaños.</p>
+            <a class="button" href="mailto:lacharruaalfajores@gmail.com?subject=Presupuesto%20para%20mi%20evento"><span data-i18n="bizCard2Btn">Pedir presupuesto</span></a>
+          </div>
+        </div>
+      </section>
       <footer class="closing">
         <span data-i18n="footerFlavor">Los cinco sabores de La Charrua</span>
         <span><span data-i18n="orders">Pedidos:</span> <a href="tel:+16504077935">(650) 407-7935</a></span>
@@ -331,14 +357,14 @@
           origin:'Alfajores uruguayos', heroTitle:'Tu alfajor favorito, como más te <em>tienta.</em>', lede:'Un alfajor es un clásico uruguayo: dos tapas suaves unidas por un relleno generoso. Los nuestros están hechos con dulce de leche real, en cinco combinaciones para elegir.', buildOrder:'Armar mi pedido', viewFlavors:'Ver sabores', priceAria:'Precio', priceEach:'$5 c/u', bulkPrice:'Más de 6 unidades: $4.50 cada uno', heroAlt:'Alfajores originales de La Charrua junto a su caja y envoltorio artesanal', stampAlt:'Sticker de La Charrua Alfajores', featuresAria:'Características', fiveFlavors:'5 sabores', dulceDeLeche:'Dulce de leche real', madeYourWay:'Pedí a tu gusto',
           flavorsLabel:'Cinco tentaciones', flavorsTitle:'Hay un sabor para cada antojo.', classicName:'Clásico de Chocolate', classicDesc:'Tapas de chocolate rellenas con dulce de leche.', classicAlt:'Classic Chocolate', classicPhotoAlt:'Alfajor clásico de chocolate de La Charrua, cortado para mostrar el dulce de leche', whiteName:'Chocolate Blanco', whiteDesc:'Tapas suaves con dulce de leche y cobertura de chocolate blanco.', whiteAlt:'White Chocolate', whitePhotoAlt:'Alfajor de chocolate blanco de La Charrua, cortado para mostrar el dulce de leche', coconutName:'Coco', coconutDesc:'Tapas de coco rellenas con dulce de leche.', coconutAlt:'Coconut', coconutPhotoAlt:'Alfajores de coco de La Charrua rellenos con dulce de leche', bonobonName:'BonoBon', bonobonDesc:'Tapas suaves de chocolate, ganache de maní y cobertura de chocolate.', bonobonAlt:'Peanut ganache', bonobonPhotoAlt:'Alfajor BonoBon de La Charrua con cobertura de chocolate y ganache de maní', bonobonWhiteName:'BonoBon Blanco', bonobonWhiteDesc:'Tapas suaves de chocolate, ganache de maní y cobertura de chocolate blanco.', bonobonWhiteAlt:'White chocolate + peanut', bonobonWhitePhotoAlt:'Alfajor BonoBon Blanco de La Charrua, cortado para mostrar la ganache de maní',
           orderLabel:'Tu caja, a tu manera', orderTitle:'Mezclá sabores. Armá tu caja.', orderIntro:'Completá el formulario acá y elegí cómo terminar tu pedido: enviarlo por WhatsApp o copiar el resumen para mandarlo por Instagram.', priceNote:'por unidad<br><b>$4.50 c/u</b> en pedidos de 7 o más', classicFilling:'Dulce de leche', whiteFilling:'Dulce de leche · chocolate blanco', coconutFilling:'Dulce de leche · coco', bonobonFilling:'Ganache de maní · chocolate', bonobonWhiteFilling:'Ganache de maní · chocolate blanco', yourName:'Tu nombre', namePlaceholder:'¿Cómo te llamás?', requestedDate:'Fecha deseada', orderNote:'Nota para el pedido', notePlaceholder:'Ej.: es para regalo, horario preferido…', selection:'Tu selección', alfajores:'alfajores', estimatedTotal:'Total estimado', openWhatsApp:'Abrir pedido en WhatsApp', copyOrderAria:'Copiar resumen del pedido', copyInstagram:'Copiar para Instagram', sendNote:'WhatsApp se abre con tu pedido listo. Revisalo y tocá Enviar para confirmarlo.', emptyMessage:'Elegí al menos un alfajor para continuar.',
-          socialTitle:'¿Preferís escribirnos por Instagram?', socialText:'Copiá tu pedido de arriba y mandanos un mensaje directo.', copyHandle:'Copiar @la.charrua.alfajores', footerFlavor:'Los cinco sabores de La Charrua', orders:'Pedidos:', chosenYet:'¿Ya elegiste?', buildShort:'Armar pedido', orderCopied:'Pedido copiado', instagramCopied:'Instagram copiado', copyManually:'Copiá el texto manualmente', selectCopy:'Seleccioná el texto y elegí Copiar.', done:'Listo', specialPrice:'Precio especial aplicado', discountHint:'Con 7 o más: $4.50 c/u', remove:'Quitar', add:'Agregar'
+          socialTitle:'¿Preferís escribirnos por Instagram?', socialText:'Copiá tu pedido de arriba y mandanos un mensaje directo.', copyHandle:'Copiar @la.charrua.alfajores', bizCard1Title:'¿Tenés un negocio?', bizCard1Text:'Hacemos alfajores para cafés, restaurantes y regalos corporativos.', bizCard1Btn:'Quiero para mi negocio', bizCard2Title:'¿Tenés un evento?', bizCard2Text:'¿Querés que seamos parte de tu evento, fiesta o cumpleaños? Pedinos presupuesto y opciones de tamaños.', bizCard2Btn:'Pedir presupuesto', businessTitle:'La Charrua en tu negocio', businessIntro:'Nos encantaría ser parte de tu negocio 🤎', footerFlavor:'Los cinco sabores de La Charrua', orders:'Pedidos:', chosenYet:'¿Ya elegiste?', buildShort:'Armar pedido', orderCopied:'Pedido copiado', instagramCopied:'Instagram copiado', copyManually:'Copiá el texto manualmente', selectCopy:'Seleccioná el texto y elegí Copiar.', done:'Listo', specialPrice:'Precio especial aplicado', discountHint:'Con 7 o más: $4.50 c/u', remove:'Quitar', add:'Agregar'
         },
         en: {
           title:'La Charrua · Uruguayan alfajores', description:'Uruguayan alfajores by La Charrua, made with real dulce de leche. Choose from five flavors and build your order.',
           origin:'Uruguayan alfajores', heroTitle:'Your favorite alfajor, just the way you <em>crave it.</em>', lede:'An alfajor is a Uruguayan classic: two soft cookies joined by a generous filling. Ours are made with real dulce de leche in five combinations to choose from.', buildOrder:'Build my order', viewFlavors:'See flavors', priceAria:'Price', priceEach:'$5 each', bulkPrice:'More than 6: $4.50 each', heroAlt:'Original La Charrua alfajores with their handmade box and wrapping', stampAlt:'La Charrua Alfajores sticker', featuresAria:'Highlights', fiveFlavors:'5 flavors', dulceDeLeche:'Real dulce de leche', madeYourWay:'Made to your taste',
           flavorsLabel:'Five temptations', flavorsTitle:'A flavor for every craving.', classicName:'Classic Chocolate', classicDesc:'Chocolate cookies filled with dulce de leche.', classicAlt:'Clásico de Chocolate', classicPhotoAlt:'La Charrua classic chocolate alfajor, cut open to show the dulce de leche', whiteName:'White Chocolate', whiteDesc:'Soft cookies filled with dulce de leche and coated in white chocolate.', whiteAlt:'Chocolate Blanco', whitePhotoAlt:'La Charrua white chocolate alfajor, cut open to show the dulce de leche', coconutName:'Coconut', coconutDesc:'Coconut cookies filled with dulce de leche.', coconutAlt:'Coco', coconutPhotoAlt:'La Charrua coconut alfajores filled with dulce de leche', bonobonName:'BonoBon', bonobonDesc:'Soft chocolate cookies with peanut ganache and a chocolate coating.', bonobonAlt:'Ganache de maní', bonobonPhotoAlt:'La Charrua BonoBon alfajor with chocolate coating and peanut ganache', bonobonWhiteName:'White BonoBon', bonobonWhiteDesc:'Soft chocolate cookies with peanut ganache and a white chocolate coating.', bonobonWhiteAlt:'BonoBon Blanco', bonobonWhitePhotoAlt:'La Charrua White BonoBon alfajor, cut open to show the peanut ganache',
           orderLabel:'Your box, your way', orderTitle:'Mix flavors. Build your box.', orderIntro:'Complete the form here, then choose how to finish your order: send it through WhatsApp or copy the summary to message us on Instagram.', priceNote:'per alfajor<br><b>$4.50 each</b> on orders of 7 or more', classicFilling:'Dulce de leche', whiteFilling:'Dulce de leche · white chocolate', coconutFilling:'Dulce de leche · coconut', bonobonFilling:'Peanut ganache · chocolate', bonobonWhiteFilling:'Peanut ganache · white chocolate', yourName:'Your name', namePlaceholder:'What’s your name?', requestedDate:'Requested date', orderNote:'Order note', notePlaceholder:'Example: it’s a gift, preferred pickup time…', selection:'Your selection', alfajores:'alfajores', estimatedTotal:'Estimated total', openWhatsApp:'Open order in WhatsApp', copyOrderAria:'Copy order summary', copyInstagram:'Copy for Instagram', sendNote:'WhatsApp opens with your order ready. Review it and tap Send to confirm.', emptyMessage:'Choose at least one alfajor to continue.',
-          socialTitle:'Prefer to message us on Instagram?', socialText:'Copy your order above and send us a direct message.', copyHandle:'Copy @la.charrua.alfajores', footerFlavor:'La Charrua’s five flavors', orders:'Orders:', chosenYet:'Ready to order?', buildShort:'Build order', orderCopied:'Order copied', instagramCopied:'Instagram copied', copyManually:'Copy the text manually', selectCopy:'Select the text and choose Copy.', done:'Done', specialPrice:'Special price applied', discountHint:'7 or more: $4.50 each', remove:'Remove', add:'Add'
+          socialTitle:'Prefer to message us on Instagram?', socialText:'Copy your order above and send us a direct message.', copyHandle:'Copy @la.charrua.alfajores', bizCard1Title:'Do you own a business?', bizCard1Text:'We make alfajores for cafés, restaurants, and corporate gifts.', bizCard1Btn:'For my business', bizCard2Title:'Planning an event?', bizCard2Text:'Want us to be part of your event, party, or birthday? Ask us for a quote and size options.', bizCard2Btn:'Get a quote', businessTitle:'La Charrua for your business', businessIntro:'We\'d love to be part of your business 🤎', footerFlavor:'La Charrua’s five flavors', orders:'Orders:', chosenYet:'Ready to order?', buildShort:'Build order', orderCopied:'Order copied', instagramCopied:'Instagram copied', copyManually:'Copy the text manually', selectCopy:'Select the text and choose Copy.', done:'Done', specialPrice:'Special price applied', discountHint:'7 or more: $4.50 each', remove:'Remove', add:'Add'
         }
       };
       var rows = Array.prototype.slice.call(document.querySelectorAll('.pick-row'));
