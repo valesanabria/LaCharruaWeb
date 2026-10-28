@@ -334,7 +334,7 @@
               <div class="summary-total"><div class="summary-label" data-i18n="estimatedTotal">Total estimado</div><strong id="total-price">$0.00</strong><div class="discount" id="discount-note"></div></div>
             </div>
             <div class="order-actions">
-              <a class="button whatsapp" id="whatsapp-order" href="https://api.whatsapp.com/send?phone=16504077935" target="_blank" rel="noopener external">
+              <a class="button whatsapp" id="whatsapp-order" href="https://api.whatsapp.com/send?phone=16504418365" target="_blank" rel="noopener external">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.3L3 20.2l1.4-5A8.4 8.4 0 1 1 20.5 11.6Z"/><path d="M8.4 7.5c.2-.4.4-.4.7-.4h.5c.2 0 .3.1.4.4l.9 2c.1.3.1.5-.1.7l-.7.9c-.2.2-.2.4 0 .7.7 1.3 1.8 2.3 3.1 3 .3.2.5.1.7-.1l.9-1.1c.2-.3.4-.3.7-.2l2 .9c.3.1.4.3.4.5 0 .3-.2 1.6-1.2 2.2"/></svg>
                 <span data-i18n="openWhatsApp">Abrir pedido en WhatsApp</span>
               </a>
@@ -375,7 +375,7 @@
       </section>
       <footer class="closing">
         <span class="hands" data-i18n="footerHands">🇺🇾 Hechos artesanalmente por manos uruguayas 🇺🇾</span>
-        <span><span data-i18n="orders">Pedidos:</span> <a href="tel:+16504077935">(650) 407-7935</a></span>
+        <span><span data-i18n="orders">Pedidos:</span> <a href="tel:+16504418365">(650) 441-8365</a></span>
       </footer>
     </div>
   </main>
@@ -501,7 +501,7 @@
         if(!validate()){ e.preventDefault(); return; }
         var text=orderText();
         document.getElementById('whatsapp-text').value=text;
-        whatsappLink.href='https://api.whatsapp.com/send?phone=16504077935&text='+encodeURIComponent(text);
+        whatsappLink.href='https://api.whatsapp.com/send?phone=16504418365&text='+encodeURIComponent(text);
       });
       document.querySelectorAll('.order-jump').forEach(function(link){
         link.addEventListener('click',function(e){
